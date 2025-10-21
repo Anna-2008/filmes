@@ -1,0 +1,106 @@
+/* Estilos gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f2f5 0%, #e0e7ee 100%);
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #880e4f; /* Um tom de roxo/vinho para romance */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: #c2185b; /* Cor mais vibrante para o título */
+}
+
+header p {
+    font-size: 1.2em;
+    color: #6a1b9a;
+}
+
+/* Estilos da lista */
+.top-10-list {
+    list-style-type: none; /* Remove os números padrão da lista */
+    counter-reset: top-10-counter; /* Cria um contador para os números */
+    padding: 0;
+    max-width: 900px; /* Aumentado para melhor visualização */
+    margin: 0 auto;
+}
+
+.top-10-list li {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px; /* Cantos mais arredondados */
+    margin-bottom: 25px;
+    padding: 25px;
+    display: flex;
+    align-items: flex-start; /* Alinhar itens ao topo */
+    counter-increment: top-10-counter; /* Incrementa o contador a cada item */
+    position: relative;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.08); /* Sombra mais suave */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.top-10-list li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Estilo para o número do ranking */
+.top-10-list li::before {
+    content: counter(top-10-counter);
+    font-size: 3.5em; /* Número maior */
+    font-weight: bold;
+    color: #f8bbd0; /* Um rosa claro suave */
+    margin-right: 25px;
+    min-width: 70px; /* Garante que o número tenha espaço */
+    text-align: center;
+    line-height: 1; /* Alinha o número verticalmente */
+}
+
+.top-10-list img {
+    width: 120px; /* Imagem um pouco maior */
+    height: 180px; /* Mantém proporção de pôster de filme */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    border-radius: 8px;
+    margin-right: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.item-info {
+    flex-grow: 1; /* Permite que o texto ocupe o espaço restante */
+}
+
+.item-info h2 {
+    margin: 0 0 10px 0;
+    color: #d81b60; /* Cor de destaque para títulos de filmes */
+    font-size: 1.8em;
+}
+
+.item-info p {
+    margin: 0;
+    color: #555;
+    font-size: 1.05em;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 20px;
+    color: #999;
+    font-size: 0.9em;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 -2px 8px rgba(0,0,0,0.05);
+}
